@@ -1,18 +1,24 @@
-﻿Console.WriteLine("Hello, World!");
-List<int> numberList = new List<int>();
-numberList.Add(1);
-numberList.Add(2);
-numberList.Add(3);
-numberList.Add(4);
+﻿List<int> numbers = new List<int>();
+numbers.Add(1);
+numbers.Add(2);
+numbers.Add(3);
+numbers.Add(4);
 int result = 0;
-foreach (var item in numberList)
+foreach (var item in numbers)
 {
     result += item;
 }
 Console.Write("Voici les nombres qui vont être calculés : ");
-foreach (var item in numberList)
+for (int i = 0; i < numbers.Count; i++)
 {
-    Console.Write($"{item}, ");
+    if(i == numbers.Count - 1)
+    {
+        Console.Write($"{i}.");
+    }
+    else
+    {
+        Console.Write($"{i}, ");
+    }
 }
 Console.WriteLine();
 Console.WriteLine($"Le résultat de ces nombres est {result}");
